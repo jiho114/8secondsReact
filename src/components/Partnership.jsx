@@ -104,12 +104,6 @@ const Partnership = ({personalInfoMent, endModalMent}) => {
               ></textarea>
             </li>
           </ul>
-          <div className="partnerImg">
-            <img
-              src={process.env.PUBLIC_URL + "/image/partner.png"}
-              alt=""
-            />
-          </div>
         </div>
         <PersonalInfo handleChange={handleChange} formData={formData} errors={errors} personalInfoMent={personalInfoMent}></PersonalInfo>
       </form>

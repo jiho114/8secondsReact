@@ -6,6 +6,7 @@ import { useTabContext } from "../context/TabContext";
 
 function NewProductItem({activeButton}) {
   const { activeTab } = useTabContext();
+  
     const images = activeTab === "WOMEN" ? womenNewProductItem[activeButton]  || []  : menNewProductItem[activeButton]  || [] ;
   return (
     <div className='NewProductItem'>

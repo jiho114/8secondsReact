@@ -96,6 +96,8 @@ const GuestOrder = () => {
    setUserName("");
    setUserPhone("");
    setUserOrderNumber("");
+   
+   alert("입력된 주문번호로 조회를 할 수 없습니다.")
   };
 
   return (

@@ -30,6 +30,10 @@ ol, ul, li{
     font-size: 15px;
     color: #535353;
 }
+
+.footerTop1 li a {
+    color: #535353;
+}
 .footerTop1 li:last-child{
     margin-right: 0;
 }
@@ -45,6 +49,10 @@ ol, ul, li{
 .footerTop2 li {
     margin-left: 40px;
     font-size: 15px;
+    color: #535353;
+}
+
+.footerTop2 li a {
     color: #535353;
 }
 

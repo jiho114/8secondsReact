@@ -193,6 +193,12 @@
   transition: all .5s;
 }
 
+.guestOrder .guestOrderInput input:focus{
+  outline: 0;
+  padding-left: 20px;
+  transition: all .5s;
+}
+
 
 
 .guestOrder .guestOrderInput p {
@@ -220,7 +226,7 @@
 
 .guestOrder .guestFiled .guestOrderBtn button{
   width:100%;
-  height:100%;
+  height:140px;
   border: 0;
   background-color: #2b2b2b;
   color: #fdfdfa;
@@ -263,7 +269,6 @@
 .announcement .announcementWrap{
   width:100%;
   margin-top: 40px;
-  border-bottom: 1px solid #d2d2d2;
 }
 
 .announcementTitle {
@@ -273,9 +278,15 @@
   height:50px;
   border-top: 1px solid #d2d2d2;
   align-items: center;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   cursor: pointer;
+  box-sizing: border-box;
+}
+
+.announcementBox:last-child{
+  width:1280px;
+  border-bottom: 1px solid #d2d2d2;
 }
 
 .announcementTitle span{
@@ -383,7 +394,13 @@
   border: none;
   border-bottom: 1px solid #d2d2d2;
   margin-bottom:10px;
-  transition: all 1s;
+  transition: all .5s;
+}
+
+.grouporder .groupFiled .groupOrderInput .groupOrderInputli input:focus, .partnerInputli input:focus{
+  border-bottom: 1px solid #535353;
+  padding-left: 20px;
+  outline: 0;
 }
 
 .grouporder .groupFiled .groupOrderInput .groupOrderInputTxtarea, .partnerInputTxtarea {
@@ -406,6 +423,11 @@
   transition: all 1s;
 }
 
+.grouporder .groupFiled .groupOrderInput .groupOrderInputTxtarea textarea:focus, .partnerInputTxtarea  textarea:focus{
+  padding-left: 20px;
+  outline: 0;
+}
+
 .grouporder .groupFiled .groupOrderInput li span::before, .partnerInput li span::before{
   content: "";
   display: block;
@@ -420,7 +442,7 @@
 
 .personalContainer {
   width:100%;
-  margin-top:50px;
+  margin-top:100px;
   text-align: left;
 }
 
@@ -563,4 +585,238 @@
   color:#fff;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.store{
+  width:1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.swiper{
+  overflow: visible;
+}
+
+.store h2{
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.store .storeSwiper {
+  display: flex;
+  justify-content: space-around; /* 가로 가운데 정렬 */
+  align-items: center;    /* 세로 가운데 정렬 */
+}
+
+.store .storeSwiper .Swiper {
+  width: 100%; /* 원하는 너비 설정 */
+  margin: 0 auto; /* 가운데 정렬 */
+  height:350px;
+}
+
+
+.storeSlideBox{
+  width:278px;
+  height:306px;
+  box-shadow: 0px 0px 15px rgb(0 , 0, 0, .1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  transition: all .5s;
+}
+
+.storeSlideBox:hover{
+  box-shadow: 0px 0px 15px rgb(0 , 0, 0, .3);
+  transition: all .5s;
+}
+
+.storeSwiper .storeSwiperContainer .storeSlideBox >img{
+  width:278px;
+  height:153px;
+}
+
+.storeSwiper .storeSwiperContainer .storeSlideBox .storeSlideTxtBox{
+  width:100%;
+  height:50%;
+  padding:20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.storeSwiper .storeSwiperContainer .storeSlideBox .storeSlideTxtBox h3{
+  font-size: 17px;
+}
+
+.storeSwiper .storeSwiperContainer .storeSlideBox .storeSlideTxtBox span{
+  font-size: 13px;
+  color: #535353;
+}
+
+.storeSwiper .storeSwiperContainer .storeSlideBox .storeSlideTxtBox .timerBox{
+  display: flex;
+  align-items: center;
+}
+
+.storeSwiper .storeSwiperContainer .storeSlideBox .storeSlideTxtBox p{
+  font-size: 12px;
+  margin-left:5px;
+  color: #535353;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  width:30px;
+  height:30px;
+  background-color:#f1f1f1;
+  border-radius: 50%;
+  position: absolute;
+  top:-38px;
+}
+
+.swiper-button-prev{
+  left:220px;
+}
+
+.swiper-button-next{
+  left: 270px;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after{
+  color: #535353;
+  font-size:18px;
+}
+
+.storeDetails{
+  display: none;
+  width:1000px;
+  height:600px;
+  background-color: #fafaf5;
+  box-shadow: 0px 0px 15px rgb(0 , 0, 0, .1);
+  border-radius: 5px;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 999;
+  top:20%;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.storeDetails.active{
+  display: block;
+}
+
+
+.storeDetails .storeDetailsContainer{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.storeDetails .storeDetailsContainer .closeBtn {
+  background-color: transparent;
+  border: 0;
+  width: 50px;
+  height:30px;
+  color: #E6E6E6;
+  position: absolute;
+  top:15px;
+  left: 15px;
+  cursor: pointer;
+  transition: all .5s;
+  z-index: 999;
+}
+
+.storeDetails .storeDetailsContainer .closeBtn:hover{
+  color: #2b2b2b;
+  transition: all .5s;
+  z-index: 999;
+}
+
+.selectedStoreDtContainer{
+  width:95%;
+  height:600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectedStoreDtTxtBox{
+  width:500px;
+  height:60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.selectedStoreDtTxtBox h3{
+  font-size: 26px;
+}
+
+.selectedStoreDtTxtBox>p{
+  font-size: 14px;
+  color: #535353;
+}
+
+.storeDtTimer{
+  display: flex;
+  align-items: center;
+}
+
+.storeDtTimer > p{
+  color: #535353;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.storeSearchContainer{
+  width:1280px;
+  height:100%;
+  margin: 0 auto;
+}
+
+.storeSearchContainer .storeSearchTop{
+  height:100px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.storeSearchContainer .storeSearchTop > h2{
+  margin: 0;
+  margin-right:25px;
+}
+
+.storeSearchContainer .storeSearchTop > input{
+  width:300px;
+  height:40px;
+  padding-left: 10px;
+  border: 0;
+  font-size: 18px;
+  background-color: transparent;
+  border-bottom: 1px solid #d2d2d2;
+  transition: all .5s;
+}
+
+.storeSearchContainer .storeSearchTop > input:focus{
+  border: 0;
+  border-bottom: 1px solid #535353;
+  outline: 0;
+  padding-left: 20px;
+  transition: all .5s;
+}
+
+.storeSearchContainer .storeSearchTop > button{
+  border: 0;
+  height:40px;
+  width:40px;
+  background-color: transparent;
+  position: absolute;
+  left:440px;
 }

@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTabContext } from "../context/TabContext";
 import "./Header.css";
 import { FaSearch } from "react-icons/fa";
 import { IoBag } from "react-icons/io5";
+import { useLoginContext } from '../context/LoginContext.js';
 
 const Header = () => {
   const { activeTab, setActiveTab } = useTabContext();
   const isActiveColor = { color: "#2b2b2b" };
+  const { isLogin, setIsLogin } = useLoginContext();
 
   return (
     <div className="headerWrap">
@@ -34,7 +36,16 @@ const Header = () => {
           </li>
         </ul>
         <ul className="myOption">
-          <li>LOGIN</li>
+          <li>
+            {
+             isLogin ? <Link to="/mypage">MY PAGE</Link> : <Link to="/login">LOGIN</Link>
+            }
+            </li>
+            <li>
+              {
+                isLogin ? <button onClick={()=>setIsLogin(false)}>LOGOUT</button> : <Link to="/signup">SIGNUP</Link>
+              }
+              </li>
           <li><FaSearch /></li>
           <li><IoBag /></li>
         </ul>

@@ -7,13 +7,11 @@ import Bestseller from '../components/Bestseller.jsx';
 import LookBook from '../components/LookBook.jsx';
 import Footer from '../components/Footer.jsx'
 import QuickMenu from '../components/QuickMenu.jsx';
+import { useTabContext } from "../context/TabContext";
+
 
 const Main = () => {
-  const [navbarTap, setNavbarTap] = useState("WOMEN");
-
-  const TabHandlerNavbar = (tab) => {
-    setNavbarTap(tab);
-  };
+  const { activeTab } = useTabContext("WOMEN");
 
   const productTxt = [
     { title: "New Product", description: "8Seconds with your winter" },
@@ -22,22 +20,20 @@ const Main = () => {
 
   return (
     <div>
-      <Header navbarTap={navbarTap} onTabClick={TabHandlerNavbar} />
-      <NavBar navbarTap={navbarTap} />
-      <MainBanner navbarTap={navbarTap} />
+      <Header/>
+      <NavBar/>
+      <MainBanner/>
       <NewProduct
         buttonList={
-          navbarTap === "WOMEN"
+          activeTab === "WOMEN"
             ? ['clothes', 'bag', 'shoes']
             : ['clothes', 'bag', 'gloves']
         }
-        navbarTap={navbarTap}
         productTxt={productTxt}
       />
       <Bestseller
         buttonList={['clothes', 'bag', 'accessories']}
         productTxt={productTxt}
-        navbarTap={navbarTap}
       />
       <LookBook></LookBook>
       <Footer></Footer>

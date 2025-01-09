@@ -114,12 +114,6 @@ const GroupOrder = ({personalInfoMent, endModalMent}) => {
               ></textarea>
             </li>
           </ul>
-          <div className="groupOrderImg">
-            <img
-              src={process.env.PUBLIC_URL + "/image/GroupOrder.png"}
-              alt=""
-            />
-          </div>
         </div>
         <PersonalInfo handleChange={handleChange} formData={formData} errors={errors} personalInfoMent={personalInfoMent}></PersonalInfo>
       </form>

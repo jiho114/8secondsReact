@@ -14,10 +14,16 @@ import Bag from './page/Bag'
 import Jacket from './page/Jacket'
 import Notice from './page/Notice'
 import { TabProvider } from './context/TabContext';
+import { LoginProvider } from "./context/LoginContext"
+import Service from './page/Service';
+import Login from './page/Login';
+import SignUp from './page/SignUp';
+import MyPage from './page/MyPage';
 
 function App() {
   return (
     <TabProvider>
+      <LoginProvider>
       <div className='App'>
         <Routes>
           <Route path="/" element={<Main />} />
@@ -32,8 +38,13 @@ function App() {
           <Route path="/bag" element={<Bag />} />
           <Route path="/jacket" element={<Jacket />} />
           <Route path="/notice" element={<Notice/>}></Route>
+          <Route path='/service' element={<Service/>}></Route>
+          <Route path="/login" element={<Login/>}></Route>
+          <Route path="/signup" element={<SignUp/>}></Route>
+          <Route path="/mypage" element={<MyPage/>}></Route>
         </Routes>
       </div>
+      </LoginProvider>
     </TabProvider>
   );
 }

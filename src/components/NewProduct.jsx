@@ -12,7 +12,6 @@ function NewProduct({ productTxt, buttonList }) {
 
   const handleButtonClick = (btnName) => {
     setActiveButton(btnName);
-    console.log(`NewProduct 버튼 클릭: ${btnName}`);
   };
 
   return (
@@ -27,9 +26,9 @@ function NewProduct({ productTxt, buttonList }) {
           activeButton={activeButton}
           onButtonClick={handleButtonClick} // 독립적인 핸들러 전달
         />
-        <NewProductItem navbarTap={activeTab} activeButton={activeButton} />
+        <NewProductItem activeButton={activeButton} />
       </div>
-      <NewProductSlide navbarTap={activeTab} />
+      <NewProductSlide/>
     </div>
   );
 }

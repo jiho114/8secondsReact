@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Footer.css'
 const Footer = () => {
   return (
@@ -6,19 +7,18 @@ const Footer = () => {
         <div className="footerWrap">
         <div className="footerTopWrap">
             <ul className="footerTop1">
-                <li>회사소개</li>
-                <li>이용약관</li>
+                <li><a href='https://www.samsungfashion.com/main.do?LANG=KO'>회사소개</a></li>
+                <li><Link to="/service">이용약관</Link></li>
                 <li className='footerColorPonint'>개인정보처리방침</li>
                 <li>멤버십안내</li>
                 <li>고객센터</li>
-                <li>매장찾기</li>
-                <li>공지사항</li>
-                <li>단체주문</li>
+                <li><Link to="/notice">매장찾기</Link></li>
+                <li><Link to="/notice">공지사항</Link></li>
+                <li><Link to="/notice">단체주문</Link></li>
             </ul>
             <ul className="footerTop2">
-                <li>입점신청</li>
-                <li>제휴문의</li>
-                <li>입점대여프로그램</li>
+                <li><Link to="/notice">제휴문의</Link></li>
+                <li><a href='https://www.ssfshop.com/public/helpdesk/com/comCptalLendInfo'>입점대여프로그램</a></li>
             </ul>
         </div>
         </div>

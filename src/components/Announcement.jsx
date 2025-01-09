@@ -15,7 +15,7 @@ const Announcement = () => {
             <div className='announcementTitle'>
             <span>{item.id}.</span>
             <span>{item.title}</span>
-            <span className='date'>{item.date}</span>
+            <span className='date' style={{color:"#535353"}}>{item.date}</span>
           </div>
           <div className={`announcementDesc ${isOpne === idx ? 'active' : ''}`}>
             <span>{item.description}</span>
