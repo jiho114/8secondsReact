@@ -23,7 +23,7 @@ const Login = () => {
 
     // 서버로 로그인 정보 전송
     axios
-      .post( `${API_URL}` , {
+      .post( `${API_URL}/Login` , {
         username: username,  // 사용자 입력된 id
         password: password,  // 사용자 입력된 pw
       })

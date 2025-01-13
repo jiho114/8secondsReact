@@ -212,7 +212,7 @@ const SignUp = () => {
       try {
         axios
           .post(
-            `${API_URL}`,
+            `${API_URL}/SignUp`,
             {
               username: id, // id -> username으로 수정
               password: pw, // pw -> password로 수정
