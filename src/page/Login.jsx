@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useLoginContext } from '../context/LoginContext.js';
 import {useNavigate} from 'react-router-dom';
 import "../css/Login.css";
+import { API_URL } from '../config/constans.js'
 
 const Login = () => {
   const history = useNavigate();
@@ -22,7 +23,7 @@ const Login = () => {
 
     // 서버로 로그인 정보 전송
     axios
-      .post( process.env.NODE_ENV === "production" ? "https://port-0-eightseconds-m5ubzdu4d92acbdf.sel4.cloudtype.app" : "localhost:8080", {
+      .post( {API_URL} , {
         username: username,  // 사용자 입력된 id
         password: password,  // 사용자 입력된 pw
       })

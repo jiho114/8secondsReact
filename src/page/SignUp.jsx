@@ -7,6 +7,8 @@ import { useLoginContext } from '../context/LoginContext.js'
 import axios from "axios";
 import "../css/Signup.css";
 import {useNavigate} from 'react-router-dom';
+import { API_URL } from '../config/constans.js'
+
 
 const SignUp = () => {
   const { setIsLogin } = useLoginContext();
@@ -210,7 +212,7 @@ const SignUp = () => {
       try {
         axios
           .post(
-            process.env.NODE_ENV === "production" ? "https://port-0-eightseconds-m5ubzdu4d92acbdf.sel4.cloudtype.app" : "localhost:8080",
+            {API_URL},
             {
               username: id, // id -> username으로 수정
               password: pw, // pw -> password로 수정
