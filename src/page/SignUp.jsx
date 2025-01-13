@@ -7,7 +7,7 @@ import { useLoginContext } from '../context/LoginContext.js'
 import axios from "axios";
 import "../css/Signup.css";
 import {useNavigate} from 'react-router-dom';
-import { API_URL } from '../config/constans.js'
+import { API_URL } from '../config/constants.js'
 
 
 const SignUp = () => {
@@ -212,7 +212,7 @@ const SignUp = () => {
       try {
         axios
           .post(
-            {API_URL},
+            `${API_URL}`,
             {
               username: id, // id -> username으로 수정
               password: pw, // pw -> password로 수정
