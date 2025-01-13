@@ -22,7 +22,7 @@ const Login = () => {
 
     // 서버로 로그인 정보 전송
     axios
-      .post("http://localhost:8080/Login", {
+      .post( process.env.NODE_ENV === "production" ? "https://port-0-eightseconds-m5ubzdu4d92acbdf.sel4.cloudtype.app" : "localhost:8080", {
         username: username,  // 사용자 입력된 id
         password: password,  // 사용자 입력된 pw
       })

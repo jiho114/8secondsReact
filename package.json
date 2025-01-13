@@ -15,7 +15,6 @@
     "react-scripts": "5.0.1",
     "swiper": "^11.2.0"
   },
-  "homepage": "https://jiho114.github.io/eightseconds",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

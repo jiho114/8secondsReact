@@ -43,7 +43,7 @@ const Header = () => {
             </li>
             <li>
               {
-                isLogin ? <button onClick={()=>setIsLogin(false)}>LOGOUT</button> : <Link to="/signup">SIGNUP</Link>
+                isLogin ? <Link to="/login"><button onClick={()=>setIsLogin(false)}>LOGOUT</button></Link> : <Link to="/signup">SIGNUP</Link>
               }
               </li>
           <li><FaSearch /></li>

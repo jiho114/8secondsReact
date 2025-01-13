@@ -22,3 +22,9 @@ export const store = [
     {id:6, title: "마리오가산아울렛점", address1:"서울특별시  금천구 디지털로 185, (가산동)", address2: "마리오아울렛 3관 2층", time:"10:30-21:00", url:`${process.env.PUBLIC_URL}/image/store6.png`, lat: 37.478302, lng: 126.887094},
     {id:7, title: "건대스타시티점", address1:"서울특별시 광진구 능동로 92, (자양동)", address2: "건대 시티오브드림점 지하2층", time:"10:30-22:00", url:`${process.env.PUBLIC_URL}/image/store7.png`, lat: 37.539154, lng:127.071240},
 ]
+
+export const mypageEvent = [
+    {id:1, title: "처음 만난 고객님을 위해", description: "20% 쿠폰 + 첫 구매 웰컴딜 + 캐시백까지 드려요", url:`${process.env.PUBLIC_URL}/image/event1.png`},
+    {id:2, title: "친구 1명만 초대해도 5천 코인", description: "무제한 2천 코인까지 받아요", url:`${process.env.PUBLIC_URL}/image/event2.png`},
+    {id:3, title: "앱에서 첫 로그인 하고 쿠폰 받으세요", description: "1만원 쿠폰 즉시 지급", url:`${process.env.PUBLIC_URL}/image/event3.png`},
+]

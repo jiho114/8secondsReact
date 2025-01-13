@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/eightseconds/static/css/main.5d8d7999.css",
-    "main.js": "/eightseconds/static/js/main.b010d15d.js",
+    "main.css": "/eightseconds/static/css/main.5c3f3004.css",
+    "main.js": "/eightseconds/static/js/main.345d3827.js",
     "index.html": "/eightseconds/index.html",
-    "main.5d8d7999.css.map": "/eightseconds/static/css/main.5d8d7999.css.map",
-    "main.b010d15d.js.map": "/eightseconds/static/js/main.b010d15d.js.map"
+    "main.5c3f3004.css.map": "/eightseconds/static/css/main.5c3f3004.css.map",
+    "main.345d3827.js.map": "/eightseconds/static/js/main.345d3827.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d8d7999.css",
-    "static/js/main.b010d15d.js"
+    "static/css/main.5c3f3004.css",
+    "static/js/main.345d3827.js"
   ]
 }

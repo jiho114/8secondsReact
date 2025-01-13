@@ -57,7 +57,7 @@
   color: #2b2b2b;
 }
 
-.myOption li > button{
+.myOption li a button{
   border: 0;
   background-color: transparent;
   font-size: 15px;

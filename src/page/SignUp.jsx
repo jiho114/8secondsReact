@@ -210,7 +210,7 @@ const SignUp = () => {
       try {
         axios
           .post(
-            "http://localhost:8080/SignUp",
+            process.env.NODE_ENV === "production" ? "https://port-0-eightseconds-m5ubzdu4d92acbdf.sel4.cloudtype.app" : "localhost:8080",
             {
               username: id, // id -> username으로 수정
               password: pw, // pw -> password로 수정
