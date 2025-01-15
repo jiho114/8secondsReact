@@ -83,7 +83,7 @@ const Store = () => {
               className="storeSwiperContainer"
               onClick={() => setSelectedStoreId(item.id)}
             >
-              <div className="storeSlideBox" onClick={handleOnClickOpen}>
+              <div className="storeSlideBox" onClick={handleOnClickOpen} style={{cursor:"pointer"}}>
                 <img src={item.url} alt={store} />
                 <div className="storeSlideTxtBox">
                   <h3>8Seconds {item.title}</h3>
