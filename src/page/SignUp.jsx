@@ -211,19 +211,12 @@ const SignUp = () => {
     ) {
       try {
         axios
-          .post(
-            `${API_URL}/SignUp`,
+          .post( `${API_URL}/users`,
             {
               username: id, // id -> username으로 수정
               password: pw, // pw -> password로 수정
               email: email,
-            },
-            {
-              headers: {
-                'Content-Type': 'application/json',
-              },
-            }
-          )
+            } )
           .then((result) => {
             console.log(result);
             setIsLogin(true);
